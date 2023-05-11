@@ -16,14 +16,19 @@ class happilee
         await this.mailid.click();
         await this.mailid.setValue("happileeuser@mailinator.com")
         await this.otp.click();
-        await browser.pause(15000);
+        await browser.pause(40000);
         await this.submit.click();
+       // await browser.pause(20000);
+
         //await browser.seleteSession();
     }
     async project()
     {
-        await browser.url("https://stage.happilee.io/projects");
+        //const url = await browser.getUrl();
+
+       // await url("https://stage.happilee.io/projects");
         //await browser.setTimeout({ implicit :15000 ,pageLoad : 10000})
-    await browser.pause(3000)
+    //await browser.pause(3000)
+    
     }
 }export default new happilee();

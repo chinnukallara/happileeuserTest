@@ -30,10 +30,13 @@ async projectcreate()
   await this.web.click();
     await this.web.setValue("www.abcfh.com");
    // await this.web.clear();
-    await browser.pause(5000)
+    await browser.pause(2000)
     await this.category.click();
-   let cat2=await $('#react-select-3-option-3')
-   await cat2.click();
+    await browser.keys('Enter');
+    //await browser.pause(3000)
+    await browser.keys('Enter');
+  //  let cat2=await $('#react-select-3-option-3')
+  //  await cat2.click();
     //await this.cat1.selectByVisibleText("Education")
    // await this.cat1.click();
   
