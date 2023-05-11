@@ -13,7 +13,7 @@ class template
  get language(){return $("/html/body/div[3]/div/div/div[3]/div[2]/div[2]/div/div/div[1]/div[2]")}
  get std(){return $("/html/body/div[3]/div/div/div[3]/div[3]/div/div/div/div[1]/div")}
  get bodybtn(){return $("/html/body/div[3]/div/div/div[3]/div[5]/div/button")}
- get body(){return $("//*[@id='rdw-wrapper-2539']/div[2]/div/div/div/div/div/div/span/span")}
+ get body(){return $('div[class="public-DraftStyleDefault-block public-DraftStyleDefault-ltr"]')}
  get preview(){return $("/html/body/div[3]/div/div/div[4]/button[2]")}
  get submit(){return $("/html/body/div[3]/div/div/div[4]/button[2]")}
  async clickbtn()
@@ -42,9 +42,14 @@ class template
     await this.std.click();
     await browser.keys('Enter')
     await browser.keys('Enter');
+    await browser.pause(5000)
     await this.bodybtn.click();
+    console.log("clicked")
+    await browser.pause(5000)
     await this.body.click();
+   console.log("body clicked")
     await this.body.setValue("Hi am template1")
+    console.log("value set**")
     await this.preview.click();
     await browser.pause(3000)
  }

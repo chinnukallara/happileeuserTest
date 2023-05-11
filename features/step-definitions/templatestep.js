@@ -9,7 +9,7 @@ When(/^Enter the credentials of the template$/,async()=>{
     await templatepage.templatecreate();
     
  })
-Then(/^Then should create the template$/,async()=>{
+Then(/^should create the template$/,async()=>{
     await templatepage.templatecreateview();
     
  })
