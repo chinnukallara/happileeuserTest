@@ -1,5 +1,6 @@
 class template
 {
+
  get cloudbutton(){return $("//*[@id='root']/div/main/div/div/div[2]/div[2]/div/div/div[3]/div/div/div[3]/div/button")}
  get divexpand(){return $("/html/body/div/div/main/div/div/div[2]/div")}
  get broadbtn(){return $("/html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[4]/button[1]/div[1]/a[1]/span[2]/..//span[contains(text(),'Broadcast')]")}
@@ -18,7 +19,18 @@ class template
  get submit(){return $("/html/body/div[3]/div/div/div[4]/button[2]")}
  async clickbtn()
  {
+   let array1=await $$("//div[@class='d-flex justify-content-between align-items-center bg-transparent border-0 px-0 pt-2 pb-1 card-header']")
+   let cloudtext=await $("//h5[text()='Cloud API  Project']")
+   // 
+   array1.forEach(async cloudtext=> {
+      
+  
+   if(cloudtext.getText()=='Cloud API  Project')
+   {
+  
     await this.cloudbutton.click();
+   }
+  });
  }
  async templatecreate()
  {
