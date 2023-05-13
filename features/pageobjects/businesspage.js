@@ -1,5 +1,3 @@
-const path=require('path');
-const { dirname } = require('path/posix');
 class Business
 {
     get democlick(){return $("//*[@id='root']/div/main/div/div/div[2]/div")}
@@ -34,11 +32,21 @@ class Business
     await this.category.click();
     await browser.keys("Enter")
     await browser.keys("Enter")
-    await browser.pause(3000)
-      await this.imagebtn.click();
-    const filepath=path.join(--dirname,'../data/a.jpeg');
-    const remoteFilePath= await browser.uploadFile(filepath)
-      imagepath.setValue(remoteFilePath);
+   
+   const input=await $("//*[@id='noFile']")
+   const image=await $("//*[@id='root']/div/main/div/div/div[3]/div[2]/div/div/div[2]/form/div[4]/div")
+  const path=require('path');
+  const filepath=path.join(__dirname,'../data/a.jpeg')
+  const remoteFilePath=await browser.uploadFile(filepath)
+  await input.click();
+  await image.setValue(remoteFilePath);
+  
+   // console.log(process.cwd())
+//    console.log(__dirname);
+//     //
+    await this.imagebtn.click();
+   await this.imagepath.setValue("/home/lenovo/Desktop/happileeuserTest/happileeuserTest/features/pageobjects/data/a.jpeg")
+   
 
      await this.applybtn.click();
   await this.savebtn.click();
