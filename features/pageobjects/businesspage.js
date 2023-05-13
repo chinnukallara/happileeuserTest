@@ -8,7 +8,7 @@ class Business
     get addbusinessbtn(){return $("button[class='businessheader__add_business_btn___iowbQ button__button___ZQ5nP']")}
     
     get businessname(){return $("input[class='py-1 px-3 addBusiness__formInput___Uef0L']")}
-    get category(){return $("//*[@id='root']/div/main/div/div/div[3]/div[2]/div/div/div[2]/form/div[3]/div/div/div[1]/div[2]")}
+    get category(){return $("/html/body/div/div/main/div/div/div[3]/div[2]/div/div/div[2]/form/div[3]/div/div/div[1]/div[2]")}
    get imagepath(){return $("//*[@id='root']/div/main/div/div/div[3]/div[2]/div/div/div[2]/form/div[4]/div")}
     get imagebtn(){return $("span[class='addBusiness__uploadIcon___T4dB4']")}
     get applybtn(){return $("/html/body/div[3]/div/div/div[3]/button[2]")}
@@ -34,13 +34,14 @@ class Business
     await this.category.click();
     await browser.keys("Enter")
     await browser.keys("Enter")
+    await browser.pause(3000)
       await this.imagebtn.click();
-       const filepath=path.join(--dirname,'../data/a.jpeg');
-       const remoteFilePath= await browser.uploadFile(filepath)
+    const filepath=path.join(--dirname,'../data/a.jpeg');
+    const remoteFilePath= await browser.uploadFile(filepath)
       imagepath.setValue(remoteFilePath);
 
-       await this.applybtn.click();
- await this.savebtn.click();
+     await this.applybtn.click();
+  await this.savebtn.click();
 
     }
     async message()
