@@ -12,6 +12,6 @@ When(/^Enter the credentials of the template$/,async()=>{
  })
 Then(/^should create the template$/,async()=>{
     await templatepage.templatecreateview();
-    await browser.pause(4000)
+    await browser.pause(5000)
     
  })

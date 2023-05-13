@@ -3,7 +3,8 @@ const { dirname } = require('path/posix');
 class Business
 {
     get democlick(){return $("//*[@id='root']/div/main/div/div/div[2]/div")}
-    get businesslink(){return $("//a[@class='d-flex align-items-center nav__nav-link___k0sNY px-2 false nav__active___CbKGw active']")}
+
+    get businesslink(){return $("/html[1]/body[1]/div[1]/div[1]/main[1]/div[1]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[5]/button[1]/div[1]/a[1]/span[2]")}
     get addbusinessbtn(){return $("button[class='businessheader__add_business_btn___iowbQ button__button___ZQ5nP']")}
     
     get businessname(){return $("input[class='py-1 px-3 addBusiness__formInput___Uef0L']")}
@@ -16,7 +17,9 @@ class Business
    
     async businessclick()
     {
+
         await this.democlick.click();
+        //await browser.keys("Enter")
         await this.businesslink.click();
         await this.addbusinessbtn.click();
         await browser.pause(3000)
@@ -25,15 +28,19 @@ class Business
     }
     async addbusiness()
     {
-        //const path=require('path');
-        //const { dirname } = require('path/posix');
-       await this.imagebtn.click();
+    //    //const path=require('path');
+    //     //const { dirname } = require('path/posix');
+    await this.businessname.setValue("Automobile");
+    await this.category.click();
+    await browser.keys("Enter")
+    await browser.keys("Enter")
+      await this.imagebtn.click();
        const filepath=path.join(--dirname,'../data/a.jpeg');
        const remoteFilePath= await browser.uploadFile(filepath)
-       imagepath.setValue(remoteFilePath);
+      imagepath.setValue(remoteFilePath);
 
        await this.applybtn.click();
-     await this.savebtn.click();
+ await this.savebtn.click();
 
     }
     async message()
