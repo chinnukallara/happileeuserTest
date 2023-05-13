@@ -26,13 +26,14 @@ class broadcast
     }
     async createbroadcast()
     {
-        await this.bname.setValue("broadcast123")
+        await this.bname.setValue("broadcast45")
         await this.tempmessage.click();
+        await browser.pause(3000)
         console.log("clicked&&&&&&&&&&&&&&&&&&&&&&")
         await browser.keys("Enter")
         console.log("worked&&&&&&&&&&&&&&&&&&&&&&")
         await browser.keys("Enter")
-       await browser.pause(3000)
+      
         await this.sample.setValue("sample23")
         await this.name.setValue("chinnu")
         await this.position.setValue("tester")

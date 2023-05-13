@@ -93,7 +93,7 @@ await browser.pause(6000)
     await browser.pause(3000);
     await this.templatelink.click();
     await this.addtemplatebtn.click();
-    await this.name.setValue("template1");
+    await this.name.setValue("template2023");
     await this.category.click();
     await browser.pause(2000)
     //await this.category.selectByVisibleText("UTILITY")

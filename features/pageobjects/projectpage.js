@@ -21,7 +21,7 @@ async projectcreate()
 {
    // await browser.pause(5000)
     await this.pname.click();
-    await this.pname.setValue("Project123")
+    await this.pname.setValue("Project785")
    // await this.pname.clear();
     await this.oname.click();
     await this.oname.setValue("ABCFH")

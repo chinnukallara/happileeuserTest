@@ -23,4 +23,9 @@ Feature: The Happilee Website
     Given I am on the Broadcast creation page
     When Enter the credentials of the Broadcast
     Then should create the Broadcast
+  Scenario: performing Business Creation
+
+    Given I am on the Business creation page
+    When Enter the credentials of the Business
+    Then should create the Business
   
