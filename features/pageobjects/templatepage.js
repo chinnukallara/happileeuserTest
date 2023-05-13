@@ -122,6 +122,7 @@ await browser.pause(6000)
   }
   async templatecreateview() {
      await this.typename.setValue("chinnu")
+     await browser.pause(4000)
     await this.submit.click();
     
   }

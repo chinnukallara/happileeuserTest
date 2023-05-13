@@ -17,3 +17,10 @@ Feature: The Happilee Website
     Given I am on the template creation page
     When Enter the credentials of the template
     Then should create the template
+    
+  Scenario: performing Broadcast Creation
+
+    Given I am on the Broadcast creation page
+    When Enter the credentials of the Broadcast
+    Then should create the Broadcast
+  
