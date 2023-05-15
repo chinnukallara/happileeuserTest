@@ -32,24 +32,33 @@ class Business
     await this.category.click();
     await browser.keys("Enter")
     await browser.keys("Enter")
-   
-   const input=await $("//*[@id='noFile']")
-   const image=await $("//*[@id='root']/div/main/div/div/div[3]/div[2]/div/div/div[2]/form/div[4]/div")
-  const path=require('path');
-  const filepath=path.join(__dirname,'../data/a.jpeg')
-  const remoteFilePath=await browser.uploadFile(filepath)
-  await input.click();
-  await image.setValue(remoteFilePath);
-  
-   // console.log(process.cwd())
-//    console.log(__dirname);
-//     //
-    await this.imagebtn.click();
-   await this.imagepath.setValue("/home/lenovo/Desktop/happileeuserTest/happileeuserTest/features/pageobjects/data/a.jpeg")
-   
 
-     await this.applybtn.click();
+  await this.imagebtn.click();
+  await browser.pause(20000);
+  await this.applybtn.click();
+  await browser.pause(5000)
   await this.savebtn.click();
+  //await browser.pause(4000)
+
+//   console.log("****************************************")
+//     console.log(process.cwd())
+
+//     await this.imagebtn.click();
+
+//   //  await this.imagebtn.click();  
+ 
+// const filePath = "/home/lenovo/Desktop/happileeuserTest/happileeuserTest/features/pageobjects/data/a.jpeg";
+// //  await this.imagebtn.click();  "
+// //browser.pause(5000)
+// //browser.filepath.click();
+// const remoteFilePath = await browser.uploadFile(filePath)
+// await this.applybtn.click();
+// await this.imagepath.setValue(remoteFilePath)
+
+
+
+    
+//  await this.savebtn.click();
 
     }
     async message()

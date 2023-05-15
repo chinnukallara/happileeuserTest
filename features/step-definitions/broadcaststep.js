@@ -7,7 +7,7 @@ Given(/^I am on the Broadcast creation page$/,async()=>{
 })
 When(/^Enter the credentials of the Broadcast$/,async()=>{
     await broadcastpage.createbroadcast();
-   // await browser.pause(5000)
+    await browser.pause(3000)
 
 })
 Then(/^should create the Broadcast$/,async()=>{
