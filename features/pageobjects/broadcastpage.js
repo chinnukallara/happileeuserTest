@@ -11,7 +11,7 @@ class broadcast
     get location(){return $("/html/body/div[3]/div/div/div[3]/div[1]/div[1]/div/div[6]/input")}
     get matchall(){return $("div[class=' css-1j9kkly-singleValue']")}
     get selectparameter(){return $("/html/body/div[3]/div/div/div[3]/div[2]/div/div[2]/div[1]/div[3]/div[2]/div[1]/div/div[1]/div[2]")}
-   get condition(){return $("div[id='react-select-5-placeholder']")}
+   get condition(){return $("//*[@id='react-select-5-placeholder']")}
    get value(){return $("input[class='filterParams__input___oy1TF input__input___MNR5c']")}
     get ba(){return $("//*[@id='tagList']/div/div/li[1]")}
     get software(){return $("//*[@id='tagList']/div/div/li[2]")}

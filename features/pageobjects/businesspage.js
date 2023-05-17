@@ -10,7 +10,7 @@ class Business
    get imagepath(){return $("//*[@id='root']/div/main/div/div/div[3]/div[2]/div/div/div[2]/form/div[4]/div")}
     get imagebtn(){return $("span[class='addBusiness__uploadIcon___T4dB4']")}
     get applybtn(){return $("/html/body/div[3]/div/div/div[3]/button[2]")}
-   get savebtn(){return $("button[class='addBusiness__buttonStyle___X55cG d-flex justify-content-center align-items-center button__button___ZQ5nP']")}
+   get savebtn(){return $("//*[@id='root']/div/main/div/div/div[3]/div[2]/div/div/div[2]/form/button")}
    
    
     async businessclick()
@@ -34,7 +34,7 @@ class Business
     await browser.keys("Enter")
 
   await this.imagebtn.click();
-  await browser.pause(20000);
+  await browser.pause(25000);
   await this.applybtn.click();
   await browser.pause(5000)
   await this.savebtn.click();
